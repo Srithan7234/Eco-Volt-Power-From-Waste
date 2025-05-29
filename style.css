@@ -1,0 +1,181 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.8em;
+  color: #0056b3;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2em;
+  color: #0056b3;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Paragraphs & Lists */
+p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+ul,
+ol {
+  margin-bottom: 20px;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+/* Key Features List */
+h2:contains("Key Features") + ul li {
+  list-style-type: '✓ '; /* Using a unicode checkmark */
+}
+/* If the :contains pseudo-selector isn't supported well or we want a class-based approach:
+   Assume a class "key-features-list" would be added to the UL in HTML.
+.key-features-list li {
+  list-style-type: '✓ ';
+}
+*/
+
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+th,
+td {
+  border: 1px solid #dee2e6;
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  background-color: #e9ecef;
+  font-weight: 600;
+  color: #495057;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tfoot td {
+  font-weight: bold;
+  background-color: #e9ecef;
+}
+
+/* Specific Sections */
+/* "Why This System?" section styling */
+h2:contains("Why This System?") + p strong {
+  color: #0056b3; /* Accent color for "Feature:" */
+  font-weight: 600;
+}
+/* If the :contains pseudo-selector isn't supported well or we want a class-based approach:
+.why-this-system p strong {
+  color: #0056b3;
+  font-weight: 600;
+}
+*/
+
+/* Links (if any were present, standard styling) */
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #004085;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  th, td {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .container {
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  ul, ol {
+    padding-left: 20px;
+  }
+}
