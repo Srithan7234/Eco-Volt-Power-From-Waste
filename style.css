@@ -179,3 +179,56 @@ a:hover {
     padding-left: 20px;
   }
 }
+
+/* Navigation Styles */
+.main-nav {
+  background-color: #333; /* Dark background for nav */
+  padding: 1em 0;
+  margin-bottom: 20px; /* Add some space below the nav */
+}
+
+.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center the nav links */
+}
+
+.main-nav ul li {
+  display: inline-block; /* Arrange links horizontally */
+  margin-right: 20px;
+}
+
+.main-nav ul li:last-child {
+  margin-right: 0;
+}
+
+.main-nav ul li a {
+  color: #fff; /* White link text */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 4px; /* Slightly rounded corners for links */
+  transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
+  background-color: #0056b3; /* Accent color on hover/focus */
+  color: #fff;
+}
+
+/* Responsive adjustments for nav if necessary */
+@media (max-width: 768px) {
+  .main-nav ul li {
+    display: block; /* Stack links vertically on smaller screens */
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .main-nav ul li:last-child {
+    margin-bottom: 0;
+  }
+  .main-nav {
+    padding: 0.5em 0;
+  }
+}
